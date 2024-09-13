@@ -1,0 +1,39 @@
+.photo-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .background-photo {
+    display: block;
+    width: 1520px;
+    height: 300px;
+    margin-bottom: 10%;
+  }
+  .black-box {
+    position: absolute;
+    bottom: 780px; 
+    left: 470px; 
+    background-color: rgba(0, 0, 0, 1); 
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 18px;
+    height: 170px;
+    width: 520px;
+  }
+  .heading{
+    font-size: 30px;
+  }
+  .headtext{
+    font-family: cursive;
+    font-size: 17px;
+  }
+  .txt{
+    text-align: left;
+    margin-left: 300px;
+    margin-bottom: -10px;
+    font-size: 20px;
+    font-family: "Gill Sans", sans-serif;
+    line-height: 1.4;
+  }

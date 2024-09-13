@@ -1,0 +1,26 @@
+<div class="bg">
+    <div class="login-container">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="login">
+            <div class="brandname"><b><i>Login</i></b></div>
+      
+            <div class="login1">
+              <label for="email">Email:</label>
+              <input id="email" formControlName="email" type="email" required />
+            </div>
+      
+            <div class="login2">
+              <label for="password">Password:</label>
+              <input id="password" formControlName="password" type="password" required />
+            </div>
+      
+            <button type="submit">Login</button>
+            <div class="secondary-btn" [routerLink]="['/signup']"><b>Don't have an account?</b></div>
+          </div>
+        </form>
+      </div>
+      <img class="logo" src="/assets/logo03.png">
+      </div>
+      
+      
+    

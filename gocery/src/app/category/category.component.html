@@ -1,0 +1,82 @@
+
+<div class="dropdown1">
+    <button
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="categoryDropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    > 
+      Please Select Categorise !
+    </button>
+  
+   
+    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+      <li><a class="dropdown-item"   [routerLink]="['/drinks']" (click)="selectCategory('Category 1')">Beverages</a></li>
+      <li><a class="dropdown-item"  [routerLink]="['/bakery']" (click)="selectCategory('Category 2')">Bakery</a></li>
+      <li><a class="dropdown-item"  [routerLink]="['/chilled']" (click)="selectCategory('Category 3')">Chilled</a></li>
+      <li><a class="dropdown-item" [routerLink]="['/vegitable']" (click)="selectCategory('Category 3')">Vegitables</a></li>
+      <li><a class="dropdown-item" [routerLink]="['/fruit']" (click)="selectCategory('Category 3')">Fruits</a></li>
+    </ul>
+    <button class="profilebtn" [routerLink]="['/profile']" >Profile</button>
+    <button class="profilebtn" [routerLink]="['/culinary']" >culinary</button>
+
+   
+  </div>
+  <div class="txt"><b>Exciting New Products Are Here!</b></div>
+  
+
+  
+  <p *ngIf="selectedCategory" class="mt-3">
+    Selected Category: {{ selectedCategory }}
+  </p>
+
+  <div class="product-list">
+    <div class="product" *ngFor="let product of products">
+      <div class="badge">New</div>
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Price: {{ product.price | currency:'LKR  ' }}</p>
+
+      <div class="quantity-controls">
+        <button (click)="decreaseQuantity(product)">-</button>
+        <span>{{ product.quantity }}</span>
+        <button (click)="increaseQuantity(product)">+</button>
+
+        <button (click)="addToWishlist(product)" class="wishlist-btn">
+          <i class="bi bi-heart"></i>
+        </button>
+      </div>
+    
+    
+    
+  
+      
+
+      <button (click)="addToCart(product)">Add to Cart</button>
+     
+    </div>
+    </div>
+
+    <div class="cart-sidebar" *ngIf="showCart">
+
+      <button (click)="toggleCart()" class="close"><b>X</b></button>
+      <div class="total-cost">
+        <b> {{ getTotalCost() | currency:'LKR ' }}</b>
+      </div>
+      <hr class="separator">
+     
+      <ul>
+        <li *ngFor="let item of cart">
+          {{ item.name }} - {{ item.quantity }} unit(s) ->
+          {{ (item.price * item.quantity) | currency:
+          'LKR ' }}
+        </li>
+      </ul>
+      <button class="view" (click)="viewCart()"  [routerLink]="['/profile']">View Cart</button>
+      
+    </div>
+    
+ 
+  

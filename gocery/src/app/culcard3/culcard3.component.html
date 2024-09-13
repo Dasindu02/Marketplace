@@ -1,0 +1,100 @@
+<div class="toa">
+    <section class="hero">
+        <h1>Club Sandwich</h1>
+        <br>
+        <img src="assets/cul13.jpg" alt="Dish Image">
+        <div class="recipe-info">
+          <p>Prep Time: 30 mins | Cook Time: 45 mins | Servings: 4</p>
+          <div class="rating">★★★★☆</div>
+        </div>
+      </section>
+      
+      <section class="recipe-details">
+        <div class="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+            <li>Chicken Breast 250g
+            </li>
+            <li>0.5 tsp Peppercorn
+            </li>
+            <li> 4 Eggs
+            </li>
+            <li>0.4 tsp Vegetable Oil
+            </li>
+            <li>Sliced Bread (12Slice)
+            </li>
+            <li>4 tbsp Butter</li>
+            <li>4pcs Lettuce</li>
+            <li>2pcs Cherry Tomato</li>
+          </ul>
+        
+        <div class="instructions">
+          <h2>Instructions</h2>
+          <ol>
+            <li> Season chicken breast with ½ sachet of MAGGI® Magic Sarap®, pepper and paprika. Set aside.
+            </li>
+            <li>Beat eggs and season with remaining ½ sachet of MAGGI® Magic Sarap®. Heat 1 tbsp of oil in a nonstick pan and pour beaten eggs. Cook until barely set. Remove and set aside.</li>
+            <li> Lightly sauté ham in 1 tbsp of oil. Remove and set aside.
+            </li>
+            <li>Heat 2 tbsp of oil in the same pan. Sauté chicken for 2mins per side. Remove and set aside</li>
+            <li>Lightly spread butter on white bread. Toast until light golden brown.</li>
+            <li>Slice chicken breast. Spread mayonnaise on toasted bread, assemble cheese, lettuce, tomato, ham, egg and chicken to make Clubhouse sandwich. Serve immediately.</li>
+          </ol>
+    </div>
+          
+        </div>
+    </section>  
+    </div>
+    <div class="cul3-container">
+      <div *ngFor="let cul3 of cul3list" class="cul3-card">
+        <div class="cul3-image">
+          <img [src]="cul3.image" alt="{{ cul3.name }}">
+        </div>
+        <div class="cul3-info">
+          <h3>{{ cul3.name }}</h3>
+          <p>{{ cul3.description }}</p>
+          <p><strong>Price:</strong> {{ cul3.price  | currency:'LKR' }}</p>
+          <div class="quantity-controls">
+            <button (click)="decreaseQuantity(cul3)">-</button>
+            <span>{{ cul3.quantity }}</span>
+            <button (click)="increaseQuantity(cul3)">+</button>
+            <button (click)="addToWishlist(cul3)" class="wishlist-btn" [class.heart-active]="cul3.inWishlist">
+              <i class="bi bi-heart"></i>
+            </button>
+          </div>
+          <div class="action-buttons">
+            <button (click)="addToCart(cul3)" class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+          
+    
+    
+          <div class="cart-sidebar" *ngIf="showCart">
+    
+            <button (click)="toggleCart()" class="close"><b>X</b></button>
+            <div class="total-cost">
+              <b> {{ getTotalCost() | currency:'LKR ' }}</b>
+            </div>
+            <hr class="separator">
+           
+            <ul>
+              <li *ngFor="let item of cart">
+                {{ item.name }} - {{ item.quantity }} unit(s) ->
+                {{ (item.price * item.quantity) | currency:
+                'LKR ' }}
+              </li>
+            </ul>
+            <button class="view" (click)="viewCart()"  [routerLink]="['/profile']">View Cart</button>
+            
+          </div>
+          
+    
+        
+      
+    
+      
+    

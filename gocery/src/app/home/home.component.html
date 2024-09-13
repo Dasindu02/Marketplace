@@ -1,0 +1,122 @@
+
+<div class="slider">
+    <div class="slides" [style.transform]="'translateX(' + (-currentIndex * 100) + '%)'">
+      <div class="slide">
+        <img src="/assets/Slide10.jpg" alt="Description of photo 1" class="slide-image">
+      </div>
+      <div class="slide">
+        <img src="/assets/Slide02.jpg" alt="Description of photo 2" class="slide-image">
+      </div>
+      <div class="slide">
+        <img src="/assets/Slide03.jpg" alt="Description of photo 3" class="slide-image">
+      </div>
+      <div class="slide">
+        <img src="/assets/Slide01.jpg" alt="Description of photo 4" class="slide-image">
+      </div>
+    </div>
+    <button (click)="prevSlide()" class="nav prev">❮</button>
+    <button (click)="nextSlide()" class="nav next">❯</button>
+  </div>
+  
+  
+  
+  
+  <div class="culinary-helathy">
+    <button class="Culinary" [routerLink]="['/login']"> Culinary </button>
+    <button class="Healthy" [routerLink]="['/']">Healthy</button>
+    <button class="offers" [routerLink]="['/newarrivals']"> Promotions !</button>
+  
+  </div>
+ 
+  <div class="card-container">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal02.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">5 easy healthy dinner ideas </h5>
+        <br>
+        <p class="card-text1">Quick and nutritious, these five dinner ideas are perfect for busy evenings. Each recipe is designed to be easy to prepare  .</p>
+        <div [routerLink]="['/card1']" class="readmore">Read More </div>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal01.jpg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Balance your diet</h5>
+        <br>
+        <br>
+        <p class="card-text">To maintain good health, eat a variety of nutrient-rich foods including whole grains, lean proteins, fruits, and vegetables.</p>
+        <div [routerLink]="['/card2']" class="readmore">Read More</div>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal03.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Dining tips for a healthy lifestyle</h5>
+        <br>
+        <p class="card-text1">Adopt simple dining habits to enhance your well-being. Focus on balanced meals, and mindful eating to support a healthier lifestyle.</p>
+        <div [routerLink]="['/card3']" class="readmore">Read More</div>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal04.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Travel bucket list for a foodie</h5>
+        <br>
+        <br>
+        <p class="card-text2">Explore the world through your taste buds with this travel bucket    
+          list for food lovers    .</p>
+        <div [routerLink]="['/card4']" class="readmore">Read More</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="card-container2">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal05.jpg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Quick and Nutritious Breakfast Ideas </h5>
+        <br>
+        <br>
+        <p class="card-text1">Start your day with energy-boosting breakfasts that are easy to prepare and packed with essential nutrients .</p>
+        <div [routerLink]="['/card5']" class="readmore">Read More
+      </div>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal06.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">
+          Healthy Snack Ideas for Weight Loss </h5>
+          <br>
+          <br>
+        <p class="card-text1">Discover satisfying snack options that are both nutritious and helpful in maintaining a balanced diet.</p>
+        <div [routerLink]="['/card6']" class="readmore">Read More
+      </div>
+    </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="/assets/heal07.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">
+          Hydration Tips for a Healthy Body </h5>
+          <br>
+          <br>
+        <p class="card-text1">Discover the importance of staying hydrated and practical ways to increase your water intake for overall well-being</p>
+        <div [routerLink]="['/card7']" class="readmore">Read More
+      </div>
+    </div>
+    </div>
+  
+    
+  
+  </div>
+  
+  
+  
+  
+
+

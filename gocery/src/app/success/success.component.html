@@ -1,0 +1,22 @@
+<div class="success-page">
+    <header>
+      <img src="assets/logo01.jpg" alt="Website Logo" class="logo">
+      <p class="website-name">Marketplace Express</p>
+      <h1>Payment Completed Successfully!</h1>
+    </header>
+    
+    <section class="details">
+      <h2>Order Summary</h2>
+      <p><strong>Total Amount:</strong> <b>{{ totalAmount | currency:'LKR' }}</b></p>
+    </section>
+    
+    <footer>
+      <p>Thank you for shopping with us!</p>
+      <p>If you have any questions, please contact us at <a href="tel:+1234567890">+94 705243589</a>.</p>
+      <button class="back" [routerLink]="['/']">Back to Home</button>
+      <button (click)="downloadBill()">Download Bill</button>
+    </footer>
+  </div>
+
+
+  

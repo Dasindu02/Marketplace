@@ -1,0 +1,52 @@
+<div class="greeting">
+    <button (click)="goBack()" class="back-btn"> <--- </button>
+    👋<b> Hey, {{ username }}!</b>
+    <div class="gtr">Welcome to the Vegitables section 🥕</div>
+</div>
+<br>
+    <div class="vegitable-container">
+        <div *ngFor="let vegitable of vegitableList" class="vegitable-card">
+          <div class="vegitable-image">
+            <img [src]="vegitable.image" alt="{{ vegitable.name }}">
+          </div>
+          <div class="vegitable-info">
+            <h3>{{ vegitable.name }}</h3>
+            <p>{{ vegitable.description }}</p>
+            <p><strong>Price:</strong> {{vegitable.price  | currency:'LKR' }}</p>
+            <div class="quantity-controls">
+              <button (click)="decreaseQuantity(vegitable)">-</button>
+              <span>{{vegitable.quantity }}</span>
+              <button (click)="increaseQuantity(vegitable)">+</button>
+              <button (click)="addToWishlist(vegitable)" class="wishlist-btn" [class.heart-active]="vegitable.inWishlist">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <div class="action-buttons">
+              <button (click)="addToCart(vegitable)" class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cart-sidebar" *ngIf="showCart">
+
+        <button (click)="toggleCart()" class="close"><b>X</b></button>
+        <div class="total-cost">
+          <b> {{ getTotalCost() | currency:'LKR ' }}</b>
+        </div>
+        <hr class="separator">
+       
+        <ul>
+          <li *ngFor="let item of cart">
+            {{ item.name }} - {{ item.quantity }} unit(s) ->
+            {{ (item.price * item.quantity) | currency:
+            'LKR ' }}
+          </li>
+        </ul>
+        <button class="view" (click)="viewCart()"  [routerLink]="['/profile']">View Cart</button>
+        
+      </div>
+      
+      
+  
+  

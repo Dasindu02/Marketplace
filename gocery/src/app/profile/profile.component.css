@@ -1,0 +1,235 @@
+.bg {
+    background: linear-gradient(45deg, #3b9be4, #161313);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0;
+    margin-bottom: -2%;
+  }
+  
+  .back-btn {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 220px;
+    left: 20px;
+  }
+  
+  .back-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .profile-container {
+    background: linear-gradient(5deg, #fffbfb, #8b8484);
+    padding: 30px;
+    border-radius: 15px;
+    width: 750px;
+    margin: 50px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    margin-left: -230px;
+  }
+  
+  .profile-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .profile-header {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info {
+    font-size: 20px;
+  }
+  
+  .profile-info1 {
+    font-size: 27px;
+  }
+  
+  .profile-info2 {
+    font-size: 20px;
+    font-family: cursive;
+  }
+  
+  .no-user-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .no-user-text {
+    font-size: 18px;
+    color: #ff0000;
+  }
+  
+  .separator {
+    border: 0;
+    height: 8px;
+    background: #ddd;
+    margin: 40px 0;
+    width: 80%;
+  }
+  
+  .cart {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background: linear-gradient(5deg, #fffbfb, #8b8484);
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: -380px;
+  }
+  
+  .cart h3 {
+    font-size: 1.6em;
+    margin-bottom: 0.8em;
+    color: #333;
+    text-align: center;
+  }
+  
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cart li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .cart li:last-child {
+    border-bottom: none;
+  }
+  
+  .cart .currency {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .remove-btn{
+    background-color: #000000;
+    color: #fffbfb;
+    width: 95px;
+    cursor: pointer;
+  }
+  .remove-btn:hover{
+    background-color: #0056b3;
+  }
+  
+  .cart.h4{
+    text-align: center;
+  }
+  .pay{
+   align-items: center;
+   margin-left: 180px;
+   padding: 4px;
+   border-radius: 12px;
+   width: 170px;
+   color: #ddd;
+   background-color: #000000;
+  
+  }
+  
+  .pay:hover{
+    background-color: #0056b3;
+  }
+  
+  .logout{
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 12px;
+    width: 85px;
+    margin-left: 550px;
+    background-color: #000000;
+    color: #ddd;
+  
+  }
+  
+  .logout:hover{
+    background-color: #0056b3;
+  }
+  .wishlist {
+    background: linear-gradient(5deg, #fffbfb, #8b8484);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin: 20px auto;
+    margin-left: 250px;
+  }
+  
+  .wishlist h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .wishlist ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+    
+  }
+  
+  .wishlist ul li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wishlist ul li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .wishlist ul li::before {
+    content: '🛒';
+    margin-right: 10px;
+  }
+  
+  .wishlist ul li span {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .add-to-cart-btn{
+    background-color: #000000;
+    color: #f0f0f0;
+    padding: 3px;
+    border-radius: 4px;
+   width: 105px;
+  }
+  .add-to-cart-btn:hover{
+    background-color: #0056b3;
+  }
+  

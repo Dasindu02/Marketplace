@@ -1,0 +1,51 @@
+<div class="bg">
+    <button (click)="goBack()" class="back-btn"> <--- </button>
+  <div *ngIf="user" class="profile-container">
+    <h1 class="profile-header">Profile Page</h1>
+    <p class="profile-info1"><b>HEY {{user.username}} !</b></p>
+    <p class="profile-info2">Welcome to your Marketplace Express profile! Here, you can view and manage all your personal details, track your cart with ongoing purchases,
+      <br> and keep an eye on your wishlist for future buys..
+    </p>
+    <br>
+    <p class="profile-info"><strong>Username:</strong> {{ user.username }}</p>
+    <p class="profile-info"><strong>Email:</strong> {{ user.email }}</p>
+    <button class="logout" (click)="logout();" [routerLink]="['/login']">LogOut</button>
+  
+  </div>
+  <div *ngIf="!user" class="no-user-container">
+    <p class="no-user-text">No user data found. Please log in again.</p>
+  </div>
+  <hr class="separator">
+  
+  
+  <div class="cart">
+  <h3>Cart Items</h3>
+  <h4><b> The Total amount is {{ getTotalCost() | currency:'LKR ' }}</b></h4>
+    <ul>
+      <li *ngFor="let item of cart;let i = index">
+        {{ item.name }} - {{ item.quantity }} unit(s) -> {{ (item.price * item.quantity) | currency:'LKR ' }}
+        <button (click)="removeItem(i)" class="remove-btn">Remove</button>
+      </li>
+    </ul>
+    <br>
+    <br>
+    <button class="pay" [routerLink]="['/bill']">Proceed to Payment</button>
+  </div>
+  <hr class="separator">
+  <div class="wishlist">
+    <h3>Your Wishlist</h3>
+    <ul>
+      <li *ngFor="let item of wishlist;let i = index">
+        {{ item.name }} - {{ item.price | currency:'LKR ' }}
+        <button class="remove-btn" (click)="removeFromWishlist(i)">Remove</button>
+        <button class="add-to-cart-btn" (click)="addToCart(item)">Add to Cart</button>
+      </li>
+    </ul>
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  

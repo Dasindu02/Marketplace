@@ -1,0 +1,38 @@
+<div class="greeting">
+  👋<b> Hey, {{ username }}! Welcome to Culinary Delights</b>
+
+<p class="head">Explore a world of flavors with our curated recipes. Find new inspirations and start cooking today!</p>
+<div class="card-container">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets/cul1.jpg" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Chicken Pineapple Salad </h5>
+        <br>
+        <div  class="readmore" [routerLink]="['/culcard1']">Try This Recipe </div>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/cul6.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Butter Chicken  </h5>
+          <br>
+          <div  class="readmore"  [routerLink]="['/culcard2']">Try This Recipe</div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/cul12.jpeg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Club Sandwich </h5>
+          <br>
+          <div  class="readmore" [routerLink]="['/culcard3']">Try This Recipe </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="assets/cul19.jpg" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Chicken Biriyani </h5>
+          <br>
+          <div  class="readmore"[routerLink]="['/culcard4']">Try This Recipe </div>
+        </div>
+      </div>
+</div>

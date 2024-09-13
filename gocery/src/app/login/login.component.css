@@ -1,0 +1,97 @@
+.bg {
+    background: linear-gradient(45deg, #3b9be4, #161313);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box;
+    height: 550px;
+    margin-bottom: -2%;
+  }
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top:45px; 
+    margin-bottom: 80px;
+    margin-left: -200px;
+  }
+
+  .brandname{
+    font-size: 35px;
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+  }
+
+  form {
+    width: 450px;
+    height: 420px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #fffbfb, #8b8484);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    margin-top: 30px; 
+    margin-left: 450px;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .login1, .login2, .login3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #666565;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #29e032;
+  }
+
+  .secondary-btn {
+    text-align: right;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; 
+  }
+  
+  .secondary-btn:hover {
+    color: #0056b3;
+  }
+  .logo{
+    margin-right: 200px;
+    height: 550px;
+    width: 550px;
+ } 

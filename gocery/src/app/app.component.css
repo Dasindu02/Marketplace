@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+.bungee-spice-regular {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s ease;
+    padding-inline: 12px;
+    background-color: dimgray;
+    position:right ;
+    top: 0;
+    width: 1500px;
+    z-index: 1000;
+    height: 200px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    color: rgb(248, 223, 32);
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-left: 445px;
+    font-family: Sans-serif;
+}
+.brand img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.toggle {
+    background: none;
+    border: none;
+    color: whitesmoke;
+}
+
+.toggle:focus {
+    box-shadow: none !important;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    color: orange !important;
+}
+
+.collapse {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin:0;
+}
+
+.nav-item {
+    margin-left: 80px;
+    font-size: 26px;
+    margin-top: 0px;
+    font-weight: 2px;
+
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 4px 8px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: orange;
+}
+
+.active {
+    padding: 4px;
+    border-radius: 3px;
+    color: black !important;
+}
+
+.custom-hr {
+    color: orange !important;
+    height: 5px !important;
+    margin-block: 2px !important;
+    width: 75%;
+    margin-inline: auto;
+}
+
+.custom-form {
+    width: 300px; 
+  }
+  
+  .custom-form .form-control {
+    height: 40px; 
+    font-size: 20px;
+    margin-left: 4px;
+    margin-top: 10px;
+    
+  
+  }
+  
+  .custom-form .btn {
+    height: 40px; 
+    width: 60 px;
+    padding: 0 20px; 
+    font-size: 16px;
+    margin-left: 210px;
+    margin-bottom: 3%;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+     
+    
+  }
+
+  .custom-form .btn:hover{
+    background-color: #0056b3;
+  }
+
+  .navbar .btn-primary {
+    background-color: #241f1f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin: 0 15px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 120px;
+    font-size: 18px;
+}
+
+.navbar .btn-primary:hover {
+    background-color:#0056b3;
+}
+
+.navbar .btn-secondary {
+    background-color: #241f1f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left:1150px;
+    margin-top: -180px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.navbar .btn-secondary:hover {
+    background-color: #0056b3;
+}
+  
+
+.footer-Container{
+    background-color: rgb(201, 193, 193);
+    height: 340px;
+   
+   
+   
+    
+}
+
+.brandname{
+    margin-left: 5%;
+    font-size: 30px;
+    margin-left: -20px;
+    font-style:italic;
+    
+    
+}
+
+.text{
+         line-height:1;
+        margin-left: 15%;
+        margin-bottom: 2%;
+        margin-top: 1%;
+                 
+}
+
+
+.foot-logo{
+    margin-top:-7%;
+   margin-left: -15%;
+    height: 135px;
+    width: 135px;
+    
+}
+.txt{ 
+    font-size: 18px;
+    text-align: right;
+    margin-top:3.5%;
+    margin-right: 50px;
+    
+}
+.para{
+    margin-top: auto;
+    margin-bottom: -30px;
+    font-size: 16px;
+    line-height: 1.45;
+    margin-left: -20px;
+    
+}
+
+.icon{
+    width: 50px; 
+    height: 50px;
+    display: right;
+        cursor: pointer;
+        margin-bottom: -2%; 
+        justify-content: flex-start;  
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: -20%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; 
+}
+
+
+
+.contact-icon{
+    width: 24px; 
+    height: 24px; 
+    margin-left:92px;
+    
+    
+}
+.add{
+    
+        font-size: 17px;
+        text-align: start;
+        padding-left: 10px;
+}
+
+
+.contact-icon1{
+    width: 23px; 
+    height: 23px; 
+    margin-right:22px;
+    margin-left: 15px;
+    margin-top: 13px;
+       
+    
+}
+.tele{
+    font-size: 17px;
+   
+    
+  
+    
+}
+
+.contact-icon2{
+    width: 24px; 
+    height: 24px; 
+    margin-right:5px;
+    margin-left: 20px;
+    margin-top: -13px;
+       
+}
+.add{
+    font-size: 17px;
+    margin-right: -12%;
+}
+
+
+.contact-item p {
+    margin: 0;
+    text-align:justify;
+
+}
+.mail{
+    font-size: 17px;
+    padding-left: 22px;
+    
+
+}
+
+.Newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 16px;
+    margin-right: 100px; 
+    margin-top: -17%;
+  }
+  
+  .newsletter-title {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 7px; 
+    margin-right: 6%;
+    margin-top:0%;
+  }
+  
+  .newsletter-description {
+    font-size: 16px; 
+    margin-bottom: 16px; 
+    text-align: justify; 
+    max-width: 100%; 
+    margin-right: -5%;
+    margin-top: -1%;
+    
+  }
+  
+  .form-group {
+    width: 100%; 
+    max-width: 400px; 
+  }
+  
+  .form-control {
+    border-radius: 4px; 
+    padding: 12px; 
+    width: 300px; 
+    margin-top: -4%;
+    margin-left: 30%;
+  }
+  
+  .subbtn {
+    text-align: center;
+  }
+  
+  .subbtn .btn {
+    margin-top: -5px;
+    padding: 12px 24px; 
+    font-size: 16px; 
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    border: none; 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+    margin-left: 35%;
+    
+  }
+  
+  .subbtn .btn:hover {
+    background-color: #0056b3; 
+  }
+  
+    
+ 
+  

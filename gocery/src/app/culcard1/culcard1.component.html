@@ -1,0 +1,94 @@
+<div class="toa">
+<section class="hero">
+    <h1>Pineapple Chicken Salad</h1>
+    <br>
+    <img src="assets/cul1.jpg" alt="Dish Image">
+    <div class="recipe-info">
+      <p>Prep Time: 30 mins | Cook Time: 45 mins | Servings: 4</p>
+      <div class="rating">★★★★☆</div>
+    </div>
+  </section>
+  
+  <section class="recipe-details">
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li> Pineapple (peeled and sliced) 400g
+        </li>
+        <li>Chicken (boneless and roasted) 400g
+        </li>
+        <li> Sweet Chille Sauce (3 tbsp)
+        </li>
+        <li>Pineapple Flower ( Nicely wash and cleaned )
+        </li>
+        <li>Salt to taste
+        </li>
+      </ul>
+    
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li> Arrange the slices of Pineapple on either side of a long dish
+        </li>
+        <li>⁠Mix the Roasted Chicken with 2 table spoons of Sweet Chillie Sauce and place it in the middle of the dish</li>
+        <li> ⁠Pour the remaining Sauce over the Pineapple
+        </li>
+        <li>⁠Garnish with the cleaned Pineapple Flower</li>
+      </ol>
+</div>
+      
+    </div>
+</section>  
+</div>
+<div class="cul1-container">
+  <div *ngFor="let cul1 of cul1list" class="cul1-card">
+    <div class="cul1-image">
+      <img [src]="cul1.image" alt="{{ cul1.name }}">
+    </div>
+    <div class="cul1-info">
+      <h3>{{ cul1.name }}</h3>
+      <p>{{ cul1.description }}</p>
+      <p><strong>Price:</strong> {{ cul1.price  | currency:'LKR' }}</p>
+      <div class="quantity-controls">
+        <button (click)="decreaseQuantity(cul1)">-</button>
+        <span>{{ cul1.quantity }}</span>
+        <button (click)="increaseQuantity(cul1)">+</button>
+        <button (click)="addToWishlist(cul1)" class="wishlist-btn" [class.heart-active]="cul1.inWishlist">
+          <i class="bi bi-heart"></i>
+        </button>
+      </div>
+      <div class="action-buttons">
+        <button (click)="addToCart(cul1)" class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
+
+
+      <div class="cart-sidebar" *ngIf="showCart">
+
+        <button (click)="toggleCart()" class="close"><b>X</b></button>
+        <div class="total-cost">
+          <b> {{ getTotalCost() | currency:'LKR ' }}</b>
+        </div>
+        <hr class="separator">
+       
+        <ul>
+          <li *ngFor="let item of cart">
+            {{ item.name }} - {{ item.quantity }} unit(s) ->
+            {{ (item.price * item.quantity) | currency:
+            'LKR ' }}
+          </li>
+        </ul>
+        <button class="view" (click)="viewCart()"  [routerLink]="['/profile']">View Cart</button>
+        
+      </div>
+      
+
+    
+  
+
+  

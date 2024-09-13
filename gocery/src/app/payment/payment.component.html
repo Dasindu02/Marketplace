@@ -1,0 +1,97 @@
+<br>
+<div class="payment-container">
+  <h2>Select Payment Method</h2>
+
+  <div class="payment-method">
+    <label>
+      <input type="radio" name="payment-method" value="credit-card" [(ngModel)]="selectedPaymentMethod" />
+      <img src="assets/pay3.png" alt="Credit Card" />
+    </label>
+
+    <label>
+      <input type="radio" name="payment-method" value="paypal" [(ngModel)]="selectedPaymentMethod" />
+      <img src="assets/pay2.png" alt="PayPal" />
+    </label>
+
+    <label>
+      <input type="radio" name="payment-method" value="visa" [(ngModel)]="selectedPaymentMethod" />
+      <img src="assets/pay1.png" alt="Visa" />
+    </label>
+  </div>
+
+  <div *ngIf="selectedPaymentMethod === 'credit-card' || selectedPaymentMethod === 'visa'">
+    <div class="total-amount">
+      <h3>Total Amount:  {{ totalAmount | currency }}</h3>
+    </div>
+<br>
+    <h3>Card Details</h3>
+
+    <div class="form-group">
+      <label for="cardHolderName">Card Holder Name:</label>
+      <input id="cardHolderName" type="text" [(ngModel)]="cardHolderName" name="cardHolderName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="cardNumber">Card Number:</label>
+      <input id="cardNumber" type="text" [(ngModel)]="cardNumber" name="cardNumber" required 
+             minlength="16" maxlength="16" pattern="\d*" #cardNumberField="ngModel" />
+      <div *ngIf="cardNumberError" class="error-message">
+        Card number must be exactly 16 digits.
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label for="expiryDate">Expiry Date:</label>
+        <input
+          id="expiryDate"
+          type="text"
+          [(ngModel)]="expiryDate"
+          name="expiryDate"
+          placeholder="MM/YY"
+          required
+          #expiryDateField="ngModel"
+          (ngModelChange)="validateExpiryDate()"
+        />
+        <div *ngIf="expiryDateError" class="error-message">
+          Invalid expiry date. Please enter a valid date (MM/YY).
+        </div>
+      </div>
+      
+      
+
+      <div class="form-group">
+        <label for="cvv">CVV:</label>
+        <input
+          id="cvv"
+          type="text"
+          [(ngModel)]="cvv"
+          name="cvv"
+          required
+          #cvvField="ngModel"
+          (ngModelChange)="validateCVV()"
+        />
+        <div *ngIf="cvvError" class="error-message">
+          CVV must be exactly 3 digits.
+        </div>
+      </div>
+      
+
+    <div class="form-group">
+      <label for="bank">Select Bank:</label>
+      <select id="bank" [(ngModel)]="selectedBank" name="selectedBank">
+        <option *ngFor="let bank of banks" [value]="bank">{{ bank }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="totalAmount">Total Amount (LKR):</label>
+      <input id="totalAmount" type="text" [(ngModel)]="totalAmount" name="totalAmount" readonly />
+    </div>
+  </div>
+
+  <div *ngIf="selectedPaymentMethod === 'paypal'">
+    <p>You will be redirected to PayPal for payment.</p>
+  </div>
+
+  <button type="submit" (click)="makePayment() ">Make Payment</button>
+</div>

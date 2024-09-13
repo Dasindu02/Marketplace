@@ -1,0 +1,121 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="brand" routerLink=" ">
+      <img src="/assets/logo03.png" alt=" " /> <i>MarketPlace Express</i>
+    </div>
+  
+    <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="toggle-icon"></span>
+    </button>
+
+    <div class="collapse" id="navbarContent">
+      <ul class="nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="moviesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" [routerLink]="['/login']">
+            Products
+          </a>
+          
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/']">Home</a>
+        </li>
+       
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/login']">New Arrivals</a>
+        </li> 
+
+        <li class="nav-item">
+          <form class="form-inline custom-form">
+            <input class="form-control " type="search"  placeholder="              Type Here ! " aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><b>Search</b></button>
+          </form>
+          
+        </li>
+
+        <li class="nav-item">
+          <div class="btn btn-primary nav-button" [routerLink]="['/login']">Login</div>
+        </li>
+        <li class="nav-item">
+          <div class="btn btn-secondary nav-button"  [routerLink]="['/signup']">Sign Up</div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+<footer class="footer-Container">
+  <div class="text">
+      <p class="brandname"><br><b>MarketPlace Express</b></p>
+     <p class="para"> Sri Lanka’s premier online grocery experience.<br>
+           Join us in redefining convenience and freshness<br>
+            in grocery shopping. Be part of a revolutionary<br>
+             approach to retailing that brings quality<br> 
+             and ease right to your doorstep.<br> </p>
+      <img class="foot-logo" src="/assets/logo01.jpg" alt="MarketPlace Express Logo">
+     
+
+      <div class="socialmedialogo">
+          <img class="icon" src="/assets/facebook.png">
+          <img class="icon" src="/assets/insta1.png">
+          <img  class="icon"src="/assets/twitter.png">
+
+
+      </div>
+      <p class="txt"><br>
+          <b>© 2024 Dasindu Dinsara. All rights reserved.</b></p>  
+  </div>
+
+  <div class="contact-info">
+      <div class="contact-item">
+          <img class="contact-icon2" src="/assets/location.png" alt="Email">
+          <p class="add">
+              <b>MarketPlace Express</b><br>
+              NO:28/18,<br>
+              Gampaha Road,<br>
+              Yakkala.
+              
+          </p>
+      </div>
+
+
+
+      <div class="contact-item">
+          <img class="contact-icon" src="/assets/mail.png" alt="Email">
+          <p class="mail"> Contact©marketplaceexpress.com </p>
+      </div>
+  
+      <div class="contact-item">
+          <img class="contact-icon1" src="/assets/call.png" alt="Phone">
+          <p class="tele"> +94 705243589</p>
+      </div>
+
+  </div>
+
+ 
+
+
+  <div class="Newsletter">
+      <h2 class="newsletter-title">Newsletter Subscribe</h2>
+      <p class="newsletter-description">
+          Subscribe to Marketplace Express for the latest updates<br>
+           on exclusive grocery deals,special promotions,New<br>arrivals, and helpful shopping tips.
+
+      </p>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email address" />
+      </div>
+      <div class="subbtn">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </div>
+    </div>
+    
+
+
+  
+
+</footer>
+

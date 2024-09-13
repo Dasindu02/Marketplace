@@ -1,0 +1,53 @@
+
+<div class="greeting">
+    <button (click)="goBack()" class="back-btn"> <--- </button>
+    👋<b> Hey, {{ username }}!</b>
+    <div class="gtr">Welcome to the Chilled section 🧀</div>
+</div>
+<br>
+    <div class="chilled-container">
+        <div *ngFor="let chilled of chilledList" class="chilled-card">
+          <div class="chilled-image">
+            <img [src]="chilled.image" alt="{{ chilled.name }}">
+          </div>
+          <div class="chilled-info">
+            <h3>{{ chilled.name }}</h3>
+            <p>{{ chilled.description }}</p>
+            <p><strong>Price:</strong> {{chilled.price  | currency:'LKR' }}</p>
+            <div class="quantity-controls">
+              <button (click)="decreaseQuantity(chilled)">-</button>
+              <span>{{ chilled.quantity }}</span>
+              <button (click)="increaseQuantity(chilled)">+</button>
+              <button (click)="addToWishlist(chilled)" class="wishlist-btn" [class.heart-active]="chilled.inWishlist">
+                <i class="bi bi-heart"></i> 
+              </button>
+            </div>
+            <div class="action-buttons">
+              <button (click)="addToCart(chilled)" class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="cart-sidebar" *ngIf="showCart">
+
+        <button (click)="toggleCart()" class="close"><b>X</b></button>
+        <div class="total-cost">
+          <b> {{ getTotalCost() | currency:'LKR ' }}</b>
+        </div>
+        <hr class="separator">
+       
+        <ul>
+          <li *ngFor="let item of cart">
+            {{ item.name }} - {{ item.quantity }} unit(s) ->
+            {{ (item.price * item.quantity) | currency:
+            'LKR ' }}
+          </li>
+        </ul>
+        <button class="view" (click)="viewCart()"  [routerLink]="['/profile']">View Cart</button>
+        
+      </div>
+      
+      
+  
+  

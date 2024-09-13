@@ -1,0 +1,77 @@
+.success-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #fffbfb, #8b8484);
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 35px;
+    color: #17ab06;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .website-name {
+    font-size: 25px;
+    color: #000000;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  .details {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
+    background-color: #bab8b8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 21px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1em;
+    color: #495057;
+  }
+  
+  footer {
+    margin-top: 20px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 10px;
+  }
+  
+  footer p {
+    font-size: 17px;
+    color: #6c757d;
+  }
+  
+  footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+.back{
+    cursor: pointer;
+}
